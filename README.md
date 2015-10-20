@@ -60,7 +60,7 @@ The path must begin with the '/' and we need to set the path where the ws is cal
 server.subscription("/chat");
 ```
 
-## Future features
+## Future plans
 - `Users accounts` - Create a user accounts module for the chat
 - `Validating Message` - Right now is sending white space to the server and to all the users
 - `Private messages` - Send private message to a specific user
