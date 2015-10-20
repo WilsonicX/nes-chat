@@ -12,11 +12,11 @@ server.connection({
 var options = {
     onConnection:function(socket){
         // sendint message to the client
-        socket.send("welcome everybody");
+        server.broadcast("welcome everybody!!!");
     },
     onMessage:function(socket, message, next){
         console.log(message);
-        server.broadcast(message);
+        server.publish("/chat", message);
     }
 }
 // pluginf registers
@@ -33,6 +33,8 @@ server.register([
     function(err){
         // check if there is an error
         if(err) throw err;
+        // the server subscription path
+        server.subscription("/chat");
         // creating the route, to serve static content the index.html page and the javasript file, to not use the browserfy module
         server.route([
             {
