@@ -1,8 +1,8 @@
 // global properties
-var Hapi   = require("hapi");
-var Inert  = require("inert");
-var Nes    = require("nes");
-var server = new Hapi.Server();
+const Hapi   = require("hapi");
+const Inert  = require("inert");
+const Nes    = require("nes");
+const server = new Hapi.Server();
 // server connections
 server.connection({
     host:"localhost",
